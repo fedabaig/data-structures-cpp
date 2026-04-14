@@ -1,0 +1,18 @@
+Which hash table seems to find things faster? Do you notice a difference?
+On my computer, both hash tables are very fast, but the chaining version usually
+felt a little more consistent. The quadratic probing table was also fast, but
+sometimes the search time was slightly higher, especially when the table was
+full and there were more collisions. The difference was not huge for a single
+search, but chaining seemed a bit more stable.
+
+Which hash table was easier to implement?
+The chaining hash table was easier for me to implement. I just hashed the key
+to a bucket and then used a list for that bucket. The quadratic probing table
+needed more careful logic for the probing loop and checking when to stop.
+
+Do you think changing the probing technique could help the first hash table?
+Yes. Changing the probing technique (for example using double hashing instead
+of quadratic probing, or choosing a different table size to improve the load
+factor) could help reduce clustering and collisions. That would lower the
+number of probes per search and could make the open-addressing hash table
+faster and more predictable.

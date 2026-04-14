@@ -1,0 +1,5 @@
+Pretzels C3 1.25 12
+Water A2 1.00 30
+Chocolate B2 1.99 15
+Nuts D1 2.50 8
+GranolaBar A4 1.35 18

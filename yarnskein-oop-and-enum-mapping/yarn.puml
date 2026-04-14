@@ -1,0 +1,87 @@
+@startuml
+
+
+skinparam ClassAttributeIconSize 0
+
+
+
+/' Objects '/
+
+class YarnSkein {
+	+YarnSkein(std::string strandWeight, std::string color, double length, std::string fiber, double skeinWeight, double needleSize, double hookSize)
+	+YarnSkein(const YarnSkein &)
+	+~YarnSkein()
+	+operator=(const YarnSkein &) : YarnSkein&
+	+{static} fiberToStr : const static std::map<fiberType, std::string>
+	+{static} strToFiber : const static std::map<std::string, fiberType>
+	+{static} strToWeight : const static std::map<std::string, weightType>
+	+{static} weightToStr : const static std::map<weightType, std::string>
+	+getHookSize() : double
+	+getLength() : double
+	+getNeedleSize() : double
+	+getSkeinWeight() : double
+	-hookSize : double
+	-length : double
+	-needleSize : double
+	-skeinWeight : double
+	-fiber : fiberType
+	+getStrandWeight() : int
+	-numFiberType : int
+	-color : std::string
+	+getColor() : std::string
+	+getFiberList() : std::string
+	+getStrandWeightName() : std::string
+	-copyYarn(const YarnSkein &) : void
+	+setColor(std::string color) : void
+	-setFiber(std::string fiber) : void
+	+setLength(double length) : void
+	-strandWeight : weightType
+}
+
+
+enum YarnSkein::fiberType {
+	ACRYLIC
+	BAMBOO
+	COTTON
+	SILK
+	WOOL
+}
+
+
+enum YarnSkein::weightType {
+	BULKY
+	FINE
+	JUMBO
+	LACE
+	LIGHT
+	MEDIUM
+	SUPERBULKY
+	SUPERFINE
+}
+
+
+
+
+
+/' Inheritance relationships '/
+
+
+
+
+/' Aggregation relationships '/
+
+.YarnSkein *-- YarnSkein::fiberType
+
+
+.YarnSkein *-- YarnSkein::weightType
+
+
+
+/' Nested objects '/
+
+
+
+
+
+
+@enduml

@@ -1,0 +1,5 @@
+Chips A3 1.50 10
+Soda B1 2.00 5
+Candy A1 0.99 20
+Cookie C2 1.75 7
+Gum B4 0.50 50

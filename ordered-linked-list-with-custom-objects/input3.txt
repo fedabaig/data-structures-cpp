@@ -1,0 +1,5 @@
+Skittles B3 1.10 25
+Mints A5 0.85 40
+Juice C1 1.80 9
+Popcorn D2 1.60 11
+Cookies B5 1.45 13
